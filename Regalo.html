@@ -542,7 +542,6 @@ const durationEl = document.getElementById("duration");
 
 /* 🎵 TUS CANCIONES AQUÍ */
 const songs = [
-    "musica.mp3",
     "cancion1.mp3",
     "cancion4.mp3",
     "cancion2.mp3",
@@ -554,9 +553,7 @@ const allLyrics = [
 
 
 //PARA CORREGIR EL ERROR
-[
 
-],
 //Die with a smile
 [
     { time: 8, text: "I.. I just woke up from a dream " },
@@ -813,17 +810,29 @@ loadSong(songIndex);
 
 <script>
 window.addEventListener("load", () => {
-    loadSong(songIndex); // Cargar la primera canción
 
     const params = new URLSearchParams(window.location.search);
-    if(params.get("play") === "true"){
-        // Esperar 1 segundo (1000ms) y luego hacer click en Next
-        setTimeout(() => {
-            nextBtn.click();
-        }, 1000); // Ajusta el retraso a tu gusto
+
+    if (params.get("play") === "true") {
+
+        loadSong(songIndex);
+
+        playSong(); // usa tu función completa
+
+    }
+
+
+window.addEventListener("load", () => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("play") === "true"){
+        // Esperar primer click para iniciar música
+        window.addEventListener("click", () => {
+            if(!isPlaying) playSong();
+        }, { once: true });
     }
 });
 
+});
 
 </script>
 
@@ -831,4 +840,5 @@ window.addEventListener("load", () => {
 
 
 </html>
+
 
