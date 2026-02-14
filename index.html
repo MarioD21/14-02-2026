@@ -11,11 +11,11 @@
 <style>
 
    
-    /* Por defecto ocultamos la portada de PC en móviles */
+    
     .portada-pc { display: block; }
     .portada-movil { display: none; }
 
-    /* Media query para pantallas pequeñas (móviles) */
+   
     @media screen and (max-width:768px) {
         .portada-pc { display: none; }
         .portada-movil { display: block; }
@@ -23,7 +23,7 @@
 
 
 #regalo{
-    display:none;  /* 👈 Oculto al inicio */
+    display:none;  
 }
 
 *{
@@ -49,7 +49,7 @@ body{
 }
 @media screen and (min-width: 769px) {
     .card {
-        margin-top: -300px; /* tu estilo específico para PC */
+        margin-top: -300px; 
     }
 }
 
@@ -81,9 +81,10 @@ body{
 .lyrics{
     margin-top: 25px;
     max-width: 700px;
+    font-size: 30px;
     text-align: center;
     font-style: italic;
-    font-size: 18px;
+   
     line-height: 1.8;
     padding: 0 20px;
 }
@@ -180,10 +181,10 @@ body{
     display:flex;
     justify-content:center;
     align-items:center;
-    gap:20px; /* espacio entre botones */
+    gap:20px; 
 }
 
-/* Botones laterales */
+
 #prevBtn,
 #nextBtn{
     width:55px;
@@ -197,7 +198,7 @@ body{
     transition:0.3s;
 }
 
-/* Botón central más grande */
+
 #playPauseBtn{
     width:70px;
     height:70px;
@@ -262,7 +263,7 @@ body{
     }
 }
 
-    /* CONTENEDOR PROGRESO */
+  
 .progress-container{
     width:300px;
     margin:25px auto 0;
@@ -273,7 +274,7 @@ body{
     font-size:14px;
 }
 
-/* BARRA BASE */
+
 .progress-bar{
     flex:1;
     height:6px;
@@ -283,7 +284,7 @@ body{
     cursor:pointer;
 }
 
-/* PROGRESO REAL */
+
 .progress{
     height:100%;
     width:0%;
@@ -295,7 +296,7 @@ body{
 .slides video {
     width: 100%;
     height: 950px;
-    object-fit: cover; /* Rellena el contenedor sin deformar */
+    object-fit: cover; 
 }
 
 
@@ -312,11 +313,11 @@ body{
 }
 
 .side-fixed{
-    display: none; /* oculto en móviles */
+    display: none; 
     position: relative;
     top: 50%;
     transform: translateY(-10%);
-    width: 120px; /* ancho del GIF */
+    width: 120px; 
     z-index: 999;
     margin-right: -130px;
 }
@@ -356,21 +357,25 @@ body{
     <div class="slides" id="slides">
         <img src="foto1.jpg">
         <img src="foto2.jpg">
-        <video src="video3.mp4" muted loop></video>
+        <video src="video1.mp4" muted loop></video>
         <img src="foto3.jpg">
         <img src="foto4.jpg">
         <img src="foto5.jpg">
-        <video src="video1.mp4" muted loop></video>
+        <video src="video5.mp4" muted loop></video>
         <img src="foto6.jpg">
         <img src="imagen7.jpg">
+         <video src="video3.mp4" muted loop></video>
         <img src="imagen8.jpg">
         <img src="imagen9.jpg">
-        <video src="video2.mp4" muted loop></video>
+        <video src="video4.mp4" muted loop></video>
         <img src="imagen10.jpg">
         <img src="imagen11.jpg">
         <img src="imagen12.png">
         <img src="imagen13.jpg">
-        <video src="video4.mp4" muted loop></video>
+        <video src="video6.mp4" muted loop></video>
+        <img src="imagen14.jpg">
+        <img src="imagen15.jpg">
+         <video src="video2.mp4" muted loop></video>
 
     </div>
 </div>
@@ -400,11 +405,30 @@ body{
 <br>
 
     <div class="message">
-        Amor, gracias por cada momento juntos.
-        ❤️
-    </div>
+        Amor, gracias por cada momento juntos.❤️<br>
+        Hoy es nuestro primer 14 de febrero juntos,<br>
+        Estar a tu lado es como descubrir un lugar donde todo tiene sentido, <br>
+        donde cada risa, cada abrazo, cada beso y cada mirada se vuelven momentos que jamas quiero olvidar.<br>
+        Eres lo mejor que me ha pasado y no puedo evitar sonreír cada vez que pienso en ti. <br>
+        Me haces sentir amado, comprendido y afortunado de tener a alguien tan maravillosa en mi vida <br>
+        Somos una historia que no quiero que termine jamas, quiero estar contigo en esta y en todas mis vidas. <br>
+        Gracias por todo lo linda que eres conmigo, quisiera decirte el como me siento por ti pero...
+        No hay palabras suficientes para expresar todo lo que siento por ti, te amo demasiado. <br>
+        <br>
+        FELIZ SAN VALENTIN MI AMORRRRR!!!♡♡♡♡
 
+        <br><br>
+        
+
+
+
+
+
+    </div>
+<br> <br>
     <div class="time-title">Compartiendo momentos hace</div>
+    <br>
+    <br>
 
   <div class="counter">
     <div>
@@ -432,6 +456,9 @@ body{
         <p>Seg</p>
     </div>
 
+                
+    <br>
+
    
 
 <audio id="bgMusic"></audio>
@@ -455,26 +482,26 @@ body{
 
 <div id="portadaPage" style="display:flex; flex-direction:column; justify-content:center; align-items:center; height:100vh; width:100%; position:relative;">
     
-    <!-- Imagen para PC -->
+   
     <img src="portadapc.jpg" 
          alt="Portada PC" 
          class="portada-pc"
          style="width:100%; max-width:100%; height:auto;">
     
-    <!-- Imagen para móviles -->
+   
     <img src="portada.jpg" 
          alt="Portada Móvil" 
          class="portada-movil"
          style="width:100%; max-width:400px; height:auto;">
     
-    <!-- Botón invisible -->
+    
     <button onclick="entrar()" 
         class="btn-movil"
         style="position:absolute; top:65%; left:50%; transform:translate(-50%, -50%); 
                width:200px; height:50px; background:transparent; border:none; cursor:pointer;">
 </button>
 
-<!-- Botón invisible para PC -->
+
 <button onclick="entrar()" 
         class="btn-pc"
         style="position:absolute; top:70%; left:50%; transform:translate(-50%, -50%); 
@@ -483,30 +510,26 @@ body{
 </div>
 
 
-<script>
-function entrar() {
-    document.getElementById("portadaPage").style.display = "none"; // Oculta la portada
-    document.getElementById("regalo").style.display = "flex";      // Muestra el contenido
-}
-</script>
 
-<script>
-function entrar(){
-    // Oculta la portada
-    document.getElementById("portadaPage").style.display = "none";
-    // Muestra el carrusel
-    document.getElementById("regalo").style.display = "block";
 
-    // Iniciar carrusel y música si ya está en tu código
-    nextSlide(); // si tienes la función
-    playSong();  // si quieres que empiece la música
-}
-</script>
+
+
 
 
 
 </body>
+<script>
+function entrar(){
+    
+    document.getElementById("portadaPage").style.display = "none";
+    
+    document.getElementById("regalo").style.display = "block";
 
+    
+    nextSlide(); 
+    playSong();  
+}
+</script>
 
 
 <script>
@@ -514,6 +537,8 @@ const slides = document.getElementById("slides");
 const images = slides.querySelectorAll("img");
 
 let index = 0;
+
+
 
 function nextSlide(){
     index++;
@@ -528,32 +553,30 @@ function nextSlide(){
 function nextSlide() {
     const currentElement = slides.children[index];
 
-    // Mover el carrusel
+   
     slides.style.transform = `translateX(-${index * 100}%)`;
 
-    // Pausar todos los videos
+    
     document.querySelectorAll("video").forEach(video => {
         video.pause();
         video.currentTime = 0;
     });
 
-    // Reproducir el video si es video
-    let delay = 4000; // Por defecto 5 segundos para imágenes
+    let delay = 5000; 
+
+    
     if (currentElement.tagName === "VIDEO") {
         currentElement.play();
-        delay = 7000; // 9 segundos para videos
+        delay = currentElement.duration * 1000; 
     }
 
-    // Preparar el siguiente índice
-    index++;
-    if (index >= slides.children.length) index = 0;
-
-    // Llamada recursiva con el delay correcto
-    setTimeout(nextSlide, delay);
+    setTimeout(() => {
+        index++;
+        if (index >= slides.children.length) index = 0;
+        nextSlide();
+    }, delay);
 }
 
-// Iniciar
-nextSlide();
 
 
 </script>
@@ -615,62 +638,61 @@ const progressBar = document.querySelector(".progress-bar");
 const currentTimeEl = document.getElementById("currentTime");
 const durationEl = document.getElementById("duration");
 
-/* 🎵 TUS CANCIONES AQUÍ */
+
 const songs = [
-    "cancion1.mp3",
+    "cancion3.mp3",
     "cancion4.mp3",
     "cancion2.mp3",
-    "cancion3.mp3"
+    "cancion1.mp3",
+    "cancion5.mp3"
 
     
 ];
 const allLyrics = [
-//Die with a smile
-[
-    { time: 8, text: "I.. I just woke up from a dream " },
-    { time: 15, text: "Where you and I had to say goodbye" },
-    { time: 20, text: "And I don't know what it all means " },
-    { time: 25, text: "But since I survived, I realized" },
-    { time: 29, text: "Wherever you go, that's where I'll follow " },
-    { time: 34, text: "Nobody's promised tomorrow " },
-    { time: 38, text: "So I'ma love you every night like it's the last night" },
-    { time: 42, text: "Like it's the last night" },
-    { time: 45, text: "If the world was ending, I'd wanna be next to you" },
-    { time: 54, text: "If the party was over and our time on Earth was through" },
-    { time: 63, text: "I'd wanna hold you just for a while and die with a smile" },
-    { time: 72, text: "If the world was ending, I'd wanna be next to you" },
-    { time: 81, text: "Ooh " },
-    { time: 85, text: "Ooh, lost, lost in the words that we scream" },
-    { time: 93, text: "I don't even wanna do this anymore" },
-    { time: 97, text: "'Cause you already know what you mean to me" },
-    { time: 101, text: "And our love's the only war worth fighting for" },
-    { time: 107, text: "Wherever you go, that's where I'll follow" },
-    { time: 111, text: "Nobody's promised tomorrow" },
-    { time: 116, text: "So I'ma love you every night like it's the last night" },
-    { time: 120, text: "Like it's the last night" },
-    { time: 122, text: "If the world was ending, I'd wanna be next to you" },
-    { time: 131, text: "If the party was over and our time on Earth was through" },
-    { time: 141, text: "I'd wanna hold you just for a while and die with a smile" },
-    { time: 149, text: "If the world was ending, I'd wanna be next to you" },
-    { time: 158, text: "Right next to you" },
-    { time: 163, text: "Next to you" },
-    { time: 168, text: "Right next to you" },
-    { time: 171, text: "Oh-oh, oh" },
-    { time: 190, text: "If the world was ending, I'd wanna be next to you" },
-    { time: 199, text: "If the party was over and our time on Earth was through" },
-    { time: 209, text: "I'd wanna hold you just for a while and die with a smile" },
-    { time: 218, text: "If the world was ending, I'd wanna be next to you" },
-    { time: 227, text: "If the world was ending, I'd wanna be next to you" },
-    { time: 236, text: "Ooh" },
-    { time: 239, text: "I'd wanna be next to you" },
+
+//Labios de cereza 2
+     [
+        { time: 26, text: "Tienes esos lindos ojos que al mirarlos me hacen tan feliz👀❣️" },
+        { time: 32, text: "Y más saber que soy su dueño" },
+        { time: 35, text: "Tu boquita roja que me encanta y decir que eso es pa mí" },
+        { time: 40, text: "Me hace sentir que ando en el cielo☁️" },
+        { time: 44, text: "Dulce mirada, sin ti soy nada, tú eres mi todo, tú eres la pieza" },
+        { time: 48, text: "Esa que encaja, la que faltaba, y a mi corazón lo complementas❤️‍🩹" },
+        { time: 52, text: "Si estás conmigo todo es perfecto, bellos momentos, nadie te llega" },
+        { time: 56, text: "Carita de ángel, corazón puro, bella por dentro y bella por fuera" },
+        { time: 61, text: "Siento que la luna está celosa por cómo tú brillas💫" },
+        { time: 70, text: "Ni un lunar te cambio, tú eres una entre un millón, mi vida" },
+        { time: 79, text: "Si vieran lo que vi, tu hermoso sonreír" },
+        { time: 83, text: "Ningún astronauta vuelve a buscar estrellas⭐" },
+        { time: 88, text: "Me gustas solo tú y nadie más que tú" },
+        { time: 92, text: "Cómo decir que no a tus labios de cereza" },
+        { time: 97, text: "Y esto es T3R Elemento, papá" },
+        { time: 101, text: "Qué im-, qué importa" },
+        { time: 113, text: "Si tomas mi mano, te lo juro que me pones a temblar" },
+        { time: 119, text: "Pues es el amor que yo siento" },
+        { time: 122, text: "Todos los días del año yo a ti te los quisiera celebrar" },
+        { time: 128, text: "Como un 14 de febrero💌" },
+        { time: 131, text: "Dulce mirada, sin ti soy nada, tú eres mi todo, tú eres la pieza" },
+        { time: 135, text: "Esa que encaja, la que faltaba, y a mi corazón lo complementas" },
+        { time: 140, text: "Si estás conmigo todo es perfecto, bellos momentos, nadie te llega" },
+        { time: 144, text: "Carita de ángel, corazón puro, bella por dentro y bella por fuera" },
+        { time: 148, text: "Eres tú la niña de mis sueños y el quererte es tanto" },
+        { time: 157, text: "Te traje las flores más bonitas y no son del antro" },
+        { time: 166, text: "Si vieran lo que vi, tu hermoso sonreír" },
+        { time: 170, text: "Ningún astronauta vuelve a buscar estrellas⭐" },
+        { time: 175, text: "Me gustas solo tú y nadie más que tú" },
+        { time: 179, text: "Cómo decir que no a tus labios de cereza" },
+
+        
     
-],
-//Fiamore
+    ],
+
+    //Fiamore
 [
         { time: 8, text: "Te ves tan linda durmiendo" },
-        { time: 11, text: "No quiero irme de tu lado" },
-        { time: 15, text: "Quiero acercarme a tu oído y decirte que te amo" },
-        { time: 21, text: "Me encantaría que sea eterno" },
+        { time: 11, text: "No quiero irme de tu lado🥹" },
+        { time: 15, text: "Quiero acercarme a tu oído y decirte que te amo💖" },
+        { time: 21, text: "Me encantaría que sea eterno💫" },
         { time: 25, text: "Quiero tenerte de frente" },
         { time: 28, text: "Quiero que seas lo primero que veo al despertar" },
         { time: 35, text: "Tú-uh-uh, uh-uh-uh, uh, uh" },
@@ -680,7 +702,7 @@ const allLyrics = [
         { time: 48, text: "A veces el trabajo te tiene tan ocupada" },
         { time: 51, text: "Que el último beso que nos dimo fue a las apurada'" },
         { time: 54, text: "Y aun así hiciste que arranque con más gana'" },
-        { time: 58, text: "Tenía un par de días malo' y me cambiaste la semana" },
+        { time: 58, text: "Tenía un par de días malo' y me cambiaste la semana❤️‍🩹" },
         { time: 61, text: "Ya que para mí es difícil dar cariño en público" },
         { time: 65, text: "Te escribí esta canción para que sepas que lo único" },
         { time: 68, text: "Que me hace mejorar es todo lo que me enseñaste" },
@@ -688,7 +710,7 @@ const allLyrics = [
         { time: 75, text: "Vi mi futuro en tus ojos cuando te conocí" },
         { time: 78, text: "Sabés que pelearía con cualquiera si fuera por ti" },
         { time: 83, text: "Con tu calor me derretí" },
-        { time: 85, text: "Cambiaste de color los días que creía que eran grises" },
+        { time: 85, text: "Cambiaste de color los días que creía que eran grises🥰" },
         { time: 89, text: "Que lo sientes, me gusta que seas tan diferente" },
         { time: 92, text: "Que todavía te rías de los mismos chistes de siempre" },
         { time: 96, text: "¿Qué sientes? Sé que tus ojos no mienten" },
@@ -710,7 +732,7 @@ const allLyrics = [
 
     ],
 
-    // Thinking out loud
+     // Thinking out loud
     [
         { time: 1, text: "When your legs don't work like they used to before" },
         { time: 7, text: "And I can't sweep you off of your feet" },
@@ -753,13 +775,121 @@ const allLyrics = [
         { time: 254, text: "That maybe we found love right where we are" },
         { time: 260, text: "Oh baby, we found love right where we are (maybe)" },
         { time: 267, text: "And we found love right where we are" },
+],
+
+//Die with a smile
+[
+    { time: 8, text: "I.. I just woke up from a dream😴" },
+    { time: 15, text: "Where you and I had to say goodbye🥲" },
+    { time: 20, text: "And I don't know what it all means ⁉️" },
+    { time: 25, text: "But since I survived, I realized" },
+    { time: 29, text: "Wherever you go, that's where I'll follow💖 " },
+    { time: 34, text: "Nobody's promised tomorrow :(" },
+    { time: 38, text: "So I'ma love you every night like it's the last night❤️‍🩹" },
+    { time: 42, text: "Like it's the last night" },
+    { time: 45, text: "If the world was ending, I'd wanna be next to you🥰💓" },
+    { time: 54, text: "If the party was over and our time on Earth was through" },
+    { time: 63, text: "I'd wanna hold you just for a while and die with a smile" },
+    { time: 72, text: "If the world was ending, I'd wanna be next to you" },
+    { time: 81, text: "Ooh " },
+    { time: 85, text: "Ooh, lost, lost in the words that we scream" },
+    { time: 93, text: "I don't even wanna do this anymore" },
+    { time: 97, text: "'Cause you already know what you mean to me" },
+    { time: 101, text: "And our love's the only war worth fighting for" },
+    { time: 107, text: "Wherever you go, that's where I'll follow💖" },
+    { time: 111, text: "Nobody's promised tomorrow" },
+    { time: 116, text: "So I'ma love you every night like it's the last night❤️‍🩹" },
+    { time: 120, text: "Like it's the last night" },
+    { time: 122, text: "If the world was ending, I'd wanna be next to you🥰💓" },
+    { time: 131, text: "If the party was over and our time on Earth was through" },
+    { time: 141, text: "I'd wanna hold you just for a while and die with a smile" },
+    { time: 149, text: "If the world was ending, I'd wanna be next to you🥰💓" },
+    { time: 158, text: "Right next to you" },
+    { time: 163, text: "Next to you" },
+    { time: 168, text: "Right next to you" },
+    { time: 171, text: "Oh-oh, oh" },
+    { time: 190, text: "If the world was ending, I'd wanna be next to you🥰💓" },
+    { time: 199, text: "If the party was over and our time on Earth was through" },
+    { time: 209, text: "I'd wanna hold you just for a while and die with a smile" },
+    { time: 218, text: "If the world was ending, I'd wanna be next to you" },
+    { time: 227, text: "If the world was ending, I'd wanna be next to you" },
+    { time: 236, text: "Ooh" },
+    { time: 239, text: "I'd wanna be next to you" },
+    
+],
 
 
-    ],
 
-     [
-        { time: 4, text: "Primera línea canción 4" }
+//Coqueta
+    [
+         { time: 1, text: "Perdon mi amor pero no podia faltar esta jajaja" },
+         { time: 9, text: "Pensando y viendo las estrellas, pregunté" },
+         { time: 12, text: "Si, en algún lugar, esto se estaría repitiendo" },
+         { time: 15, text: "Si es que, en otro mundo, tal vez nos ganó el deseo" },
+         { time: 18, text: "O si solo fuimos un error del universo🌠" },
+         { time: 21, text: "Baby, bésame" },
+         { time: 23, text: "Quiero que vuelvas a mis brazos pa' sentirnos eternos como la última vez" },
+         { time: 29, text: "Quiero confesarte, te extraño, como un loco, te pienso, yo sé que tú también" },
+         { time: 35, text: "Porfa, ma, ya vuelve conmigo, pero no como amigos como la última vez" },
+         { time: 41, text: "Quiero confesarte, te extraño, como un loco, te pienso, yo sé que tú también" },
+         { time: 46, text: "Coqueta" },
+         { time: 48, text: "Si me quieres, solo di la neta" },
+         { time: 51, text: "Que se entere todito el planeta" },
+         { time: 54, text: "Chula, ya decide qué onda, nena" },
+         { time: 57, text: "Qué onda, nena" },
+         { time: 58, text: "Coqueta" },
+         { time: 60, text: "Si me quieres, solo di la neta" },
+         { time: 63, text: "Que se entere todito el planeta" },
+         { time: 66, text: "Chula, ya decide qué onda, nena" },
+         { time: 69, text: "Qué onda, nena" },
+         { time: 71, text: "Dame, dame un besito, mami" },
+         { time: 75, text: "Dale, ¿cómo no quieres que me clave?" },
+         { time: 78, text: "De mi cel ahí te va la clave(1510), que yo no hablo con nadie" },
+         { time: 82, text: "Nomás contigo" },
+         { time: 83, text: "Dame, dame un besito, mami" },
+         { time: 86, text: "Dale, ¿cómo no quieres que me clave?" },
+         { time: 91, text: "De mi cel ahí te va la clave(1510), que yo no hablo con nadie" },
+         { time: 94, text: "Nomás contigo" },
+         { time: 96, text: "jajaja me acorde cuando te la dedicaba aaa te amo" },
+         { time: 119, text: "Es que me mata el recuerdo y solo pienso que pienso" },
+         { time: 122, text: "Que te quites los Dolce & Gabbana" },
+         { time: 125, text: "Yo solo siento que siento que no sé qué es lo que siento" },
+         { time: 128, text: "Tanto nos pasó en una semana" },
+         { time: 131, text: "Ya bloquéame si no es cierto, pero yo sé, baby" },
+         { time: 134, text: "Cierto que ambos, mami, nos teníamos ganas" },
+         { time: 137, text: "Puede que sí, reconozco, sé que apenas te conozco" },
+         { time: 140, text: "Lo que me mató fue tu mirada" },
+         { time: 142, text: "Baby, bésame" },
+         { time: 145, text: "Quiero que vuelvas a mis brazos pa' sentirnos eternos como la última vez" },
+         { time: 151, text: "Quiero confesarte, te extraño, como un loco, te pienso, yo sé que tú también" },
+         { time: 157, text: "Porfa, ma, ya vuelve conmigo, pero no como amigos como la última vez" },
+         { time: 163, text: "Quiero confesarte, te extraño, como un loco, te pienso, yo sé que tú también" },
+         { time: 168, text: "Coqueta" },
+         { time: 170, text: "Si me quieres, solo di la neta" },
+         { time: 172, text: "Que se entere todito el planeta" },
+         { time: 175, text: "Chula, ya decide qué onda, nena" },
+         { time: 178, text: "Qué onda, nena" },
+         { time: 180, text: "Coqueta" },
+         { time: 182, text: "Si me quieres, solo di la neta" },
+         { time: 184, text: "Que se entere todito el planeta" },
+         { time: 188, text: "Chula, ya decide qué onda, nena" },
+         { time: 191, text: "Qué onda, nena" },
+         { time: 193, text: "Dame, dame un besito, mami" },
+         { time: 195, text: "Dale, ¿cómo no quieres que me clave?" },
+         { time: 199, text: "De mi cel ahí te va la clave(1510), que yo no hablo con nadie" },
+         { time: 203, text: "Nomás contigo" },
+         { time: 204, text: "Dame, dame un besito, mami" },
+         { time: 207, text: "Dale, ¿cómo no quieres que me clave?" },
+         { time: 212, text: "De mi cel ahí te va la clave(1510), que yo no hablo con nadie" },
+         { time: 215, text: "Nomás contigo" },
+         { time: 220, text: "Si ves esto, Te amoooooo y si no voy a llorar porque me tarde mucho:(" },
+
+
+
+         
+
     ]
+
 ];
 
 audio.addEventListener("timeupdate", () => {
@@ -789,11 +919,11 @@ function loadSong(index){
 }
 
 
-/* Play */
+
 function playSong(){
-    // Intentar reproducir
+    
     audio.play().catch(() => {
-        // Si falla, esperar a que esté listo
+       
         audio.addEventListener('canplaythrough', () => {
             audio.play();
         }, { once: true });
@@ -804,7 +934,6 @@ function playSong(){
 }
 
 
-/* Pause */
 function pauseSong(){
     audio.pause();
     playBtn.innerHTML = "▶";
@@ -812,7 +941,7 @@ function pauseSong(){
     isPlaying = false;
 }
 
-/* Botón Play */
+
 playBtn.addEventListener("click", () => {
     if(isPlaying){
         pauseSong();
@@ -821,7 +950,7 @@ playBtn.addEventListener("click", () => {
     }
 });
 
-/* Botón Next */
+
 nextBtn.addEventListener("click", () => {
     songIndex++;
     if(songIndex >= songs.length){
@@ -831,7 +960,7 @@ nextBtn.addEventListener("click", () => {
     playSong();
 });
 
-/* Botón Prev */
+
 prevBtn.addEventListener("click", () => {
     songIndex--;
     if(songIndex < 0){
@@ -841,12 +970,12 @@ prevBtn.addEventListener("click", () => {
     playSong();
 });
 
-/* Auto siguiente */
+
 audio.addEventListener("ended", () => {
     nextBtn.click();
 });
 
-/* Barra progreso */
+
 audio.addEventListener("timeupdate", () => {
     const { currentTime, duration } = audio;
 
@@ -859,7 +988,7 @@ audio.addEventListener("timeupdate", () => {
     }
 });
 
-/* Click barra */
+
 progressBar.addEventListener("click", (e) => {
     const width = progressBar.clientWidth;
     const clickX = e.offsetX;
@@ -868,7 +997,7 @@ progressBar.addEventListener("click", (e) => {
     audio.currentTime = (clickX / width) * duration;
 });
 
-/* Formato tiempo */
+
 function formatTime(time){
     const minutes = Math.floor(time / 60);
     const seconds = Math.floor(time % 60);
@@ -888,18 +1017,18 @@ window.addEventListener("load", () => {
 
         loadSong(songIndex);
 
-        // Intentar autoplay inmediato
+        
         playSong();
 
-        // Si el autoplay falla (móvil), reproducir tras el primer toque
+        
         function activarAudio() {
             playSong();
-            // remover listeners
+            
             document.body.removeEventListener('click', activarAudio);
             document.body.removeEventListener('touchstart', activarAudio);
         }
 
-        // Escuchar interacción del usuario
+      
         document.body.addEventListener('click', activarAudio, { once: true });
         document.body.addEventListener('touchstart', activarAudio, { once: true });
     }
@@ -911,4 +1040,3 @@ window.addEventListener("load", () => {
 
 
 </html>
-
