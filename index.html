@@ -10,17 +10,28 @@
 
 <style>
 
-   @media screen and (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     .slider {
         overflow: hidden; /* evita scroll horizontal */
+        width: 100vw;     /* ancho de toda la pantalla */
+        max-width: 100%;  /* seguridad extra */
     }
 
     .slides {
-        width: 100%;       /* ancho del contenedor visible */
-        flex-wrap: nowrap; /* mantener slides en fila */
+        display: flex;
+        width: 100%;       /* ancho del contenedor de slides igual al visible */
+        flex-wrap: nowrap; /* mantener todos en fila */
+        transform: translateX(0); /* asegurar posición inicial */
     }
 
+    .slides video,
+    .slides img {
+        width: 100%;       /* cada slide ocupa todo el ancho */
+        flex-shrink: 0;    /* evitar que se encoja */
+        object-fit: cover; /* para videos o imágenes que llenen bien el contenedor */
+    }
 }
+
 
     
     .portada-pc { display: block; }
@@ -1061,6 +1072,7 @@ window.addEventListener("load", () => {
 
 
 </html>
+
 
 
 
