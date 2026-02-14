@@ -553,10 +553,13 @@ body{
 function entrar(){
     const regalo = document.getElementById("regalo");
     regalo.style.display = "block";
- if(window.innerWidth <= 768){ // puedes ajustar el tamaño del breakpoint
+  if(window.innerWidth <= 768){ // breakpoint para móvil
         const btnMovil = document.getElementById("btnMovil");
+        const portadaMovil = document.getElementById("portadaMovil");
         if(btnMovil) btnMovil.style.display = "none";
+        if(portadaMovil) portadaMovil.style.display = "none";
     }
+
 
    const btnPC = document.getElementById("btnPC");
     if(btnPC) btnPC.style.display = "none";
@@ -1084,6 +1087,7 @@ window.addEventListener("load", () => {
 
 
 </html>
+
 
 
 
