@@ -299,13 +299,15 @@ body{
     object-fit: cover; 
 }
 
-   @media screen and (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     .slides video {
-        height: auto;       /* se ajusta automáticamente */
-        max-height: 70vh;   /* no ocupa toda la pantalla */
-        object-fit: cover;  /* mantiene proporción */
+        width: 100%;
+        height: auto;
+        max-height: 70vh;
+        object-fit: cover;
     }
 }
+
 
 
 .slider-wrapper{
@@ -365,25 +367,25 @@ body{
     <div class="slides" id="slides">
         <img src="foto1.jpg">
         <img src="foto2.jpg">
-        <video src="video1.mp4" muted loop></video>
+        <video src="video1.mp4" muted loop playsinline></video>
         <img src="foto3.jpg">
         <img src="foto4.jpg">
         <img src="foto5.jpg">
-        <video src="video5.mp4" muted loop></video>
+        <video src="video5.mp4" muted loop playsinline></video>
         <img src="foto6.jpg">
         <img src="imagen7.jpg">
-         <video src="video3.mp4" muted loop></video>
+         <video src="video3.mp4" muted loop playsinline></video>
         <img src="imagen8.jpg">
         <img src="imagen9.jpg">
-        <video src="video4.mp4" muted loop></video>
+        <video src="video4.mp4" muted loop playsinline></video>
         <img src="imagen10.jpg">
         <img src="imagen11.jpg">
         <img src="imagen12.png">
         <img src="imagen13.jpg">
-        <video src="video6.mp4" muted loop></video>
+        <video src="video6.mp4" muted loop playsinline></video>
         <img src="imagen14.jpg">
         <img src="imagen15.jpg">
-         <video src="video2.mp4" muted loop></video>
+         <video src="video2.mp4" muted loop playsinline></video>
 
     </div>
 </div>
@@ -528,15 +530,22 @@ body{
 </body>
 <script>
 function entrar(){
-    
-    document.getElementById("portadaPage").style.display = "none";
-    
-    document.getElementById("regalo").style.display = "block";
+    const regalo = document.getElementById("regalo");
+    regalo.style.display = "block";
 
-    
-    nextSlide(); 
-    playSong();  
+    // Forzar reflow y luego reproducir video
+    setTimeout(() => {
+        nextSlide(); // mueve el slider al primer slide
+        const firstVideo = regalo.querySelector("video");
+        if(firstVideo){
+            firstVideo.play().catch(() => {
+                console.log("Video inicial requiere interacción");
+            });
+        }
+        playSong(); // música
+    }, 100); // 100ms suele ser suficiente
 }
+
 </script>
 
 
@@ -1048,4 +1057,5 @@ window.addEventListener("load", () => {
 
 
 </html>
+
 
