@@ -806,16 +806,17 @@ loadSong(songIndex);
 
 <script>
 window.addEventListener("load", () => {
-    loadSong(songIndex); // cargar la primera canción
+    loadSong(songIndex); // Cargar la primera canción
 
-    // Revisar si venimos de ?play=true
     const params = new URLSearchParams(window.location.search);
     if(params.get("play") === "true"){
-
-        // Simular click en el botón Play
-        playBtn.click();
+        // Esperar 1 segundo (1000ms) y luego hacer click en Next
+        setTimeout(() => {
+            nextBtn.click();
+        }, 1000); // Ajusta el retraso a tu gusto
     }
 });
+
 
 </script>
 
@@ -823,3 +824,4 @@ window.addEventListener("load", () => {
 
 
 </html>
+
