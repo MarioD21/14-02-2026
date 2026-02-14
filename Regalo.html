@@ -817,13 +817,23 @@ window.addEventListener("load", () => {
 
         loadSong(songIndex);
 
-        playSong(); // usa tu función completa
+        // Intentar autoplay inmediato
+        playSong();
 
+        // Si el autoplay falla (móvil), reproducir tras el primer toque
+        function activarAudio() {
+            playSong();
+            // remover listeners
+            document.body.removeEventListener('click', activarAudio);
+            document.body.removeEventListener('touchstart', activarAudio);
+        }
+
+        // Escuchar interacción del usuario
+        document.body.addEventListener('click', activarAudio, { once: true });
+        document.body.addEventListener('touchstart', activarAudio, { once: true });
     }
-
-
-
 });
+;
 
 </script>
 
@@ -831,6 +841,7 @@ window.addEventListener("load", () => {
 
 
 </html>
+
 
 
 
