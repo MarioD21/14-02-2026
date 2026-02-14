@@ -553,7 +553,13 @@ body{
 function entrar(){
     const regalo = document.getElementById("regalo");
     regalo.style.display = "block";
+ if(window.innerWidth <= 768){ // puedes ajustar el tamaño del breakpoint
+        const btnMovil = document.getElementById("btnMovil");
+        if(btnMovil) btnMovil.style.display = "none";
+    }
 
+   const btnPC = document.getElementById("btnPC");
+    if(btnPC) btnPC.style.display = "none";
     // Forzar reflow y luego reproducir video
     setTimeout(() => {
         nextSlide(); // mueve el slider al primer slide
@@ -1078,6 +1084,7 @@ window.addEventListener("load", () => {
 
 
 </html>
+
 
 
 
