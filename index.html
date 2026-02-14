@@ -520,10 +520,11 @@ body{
          style="width:100%; max-width:100%; height:auto;">
     
    
-    <img src="portada.jpg" 
-         alt="Portada Móvil" 
-         class="portada-movil"
-         style="width:100%; max-width:400px; height:auto;">
+<img id="portadaMovil" src="portada.jpg" 
+     alt="Portada Móvil" 
+     class="portada-movil"
+     style="width:100%; max-width:400px; height:auto;">
+
     
     
     <button onclick="entrar()" 
@@ -557,7 +558,8 @@ function entrar(){
         const btnMovil = document.getElementById("btnMovil");
         const portadaMovil = document.getElementById("portadaMovil");
         if(btnMovil) btnMovil.style.display = "none";
-        if(portadaMovil) portadaMovil.style.display = "none";
+        if(portadaMovil) portadaMovil.remove();
+
     }
 
 
@@ -1087,6 +1089,7 @@ window.addEventListener("load", () => {
 
 
 </html>
+
 
 
 
