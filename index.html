@@ -10,7 +10,18 @@
 
 <style>
 
-   
+   @media screen and (max-width: 768px) {
+    .slider {
+        overflow: hidden; /* evita scroll horizontal */
+    }
+
+    .slides {
+        width: 100%;       /* ancho del contenedor visible */
+        flex-wrap: nowrap; /* mantener slides en fila */
+    }
+
+}
+
     
     .portada-pc { display: block; }
     .portada-movil { display: none; }
@@ -1050,6 +1061,7 @@ window.addEventListener("load", () => {
 
 
 </html>
+
 
 
 
