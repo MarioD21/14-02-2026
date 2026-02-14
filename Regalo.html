@@ -822,15 +822,6 @@ window.addEventListener("load", () => {
     }
 
 
-window.addEventListener("load", () => {
-    const params = new URLSearchParams(window.location.search);
-    if (params.get("play") === "true"){
-        // Esperar primer click para iniciar música
-        window.addEventListener("click", () => {
-            if(!isPlaying) playSong();
-        }, { once: true });
-    }
-});
 
 });
 
@@ -840,5 +831,6 @@ window.addEventListener("load", () => {
 
 
 </html>
+
 
 
