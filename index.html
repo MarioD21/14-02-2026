@@ -299,6 +299,14 @@ body{
     object-fit: cover; 
 }
 
+   @media screen and (max-width: 768px) {
+    .slides video {
+        height: auto;       /* se ajusta automáticamente */
+        max-height: 70vh;   /* no ocupa toda la pantalla */
+        object-fit: cover;  /* mantiene proporción */
+    }
+}
+
 
 .slider-wrapper{
     display:flex;
@@ -1040,3 +1048,4 @@ window.addEventListener("load", () => {
 
 
 </html>
+
